@@ -1,6 +1,6 @@
 package by.training.finalproject.builder;
 
-import by.training.finalproject.entity.Address;
+import by.training.finalproject.entity_legacy.Address;
 
 public class AddressBuilder {
 

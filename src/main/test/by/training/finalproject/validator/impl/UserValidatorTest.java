@@ -1,6 +1,6 @@
 package by.training.finalproject.validator.impl;
 
-import by.training.finalproject.entity.UserRole;
+import by.training.finalproject.entity_legacy.UserRole;
 import by.training.finalproject.exception.ValidatorException;
 import org.junit.Test;
 

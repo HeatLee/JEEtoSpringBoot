@@ -1,8 +1,8 @@
 package by.training.finalproject.service.impl;
 
 import by.training.finalproject.dao.RequestDAO;
-import by.training.finalproject.entity.Request;
-import by.training.finalproject.entity.RequestStatus;
+import by.training.finalproject.entity_legacy.Request;
+import by.training.finalproject.entity_legacy.RequestStatus;
 import by.training.finalproject.exception.DAOException;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.exception.ValidatorException;

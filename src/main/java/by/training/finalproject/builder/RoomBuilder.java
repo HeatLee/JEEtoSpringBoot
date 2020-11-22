@@ -1,8 +1,8 @@
 package by.training.finalproject.builder;
 
-import by.training.finalproject.entity.Hotel;
-import by.training.finalproject.entity.Room;
-import by.training.finalproject.entity.RoomStatus;
+import by.training.finalproject.entity_legacy.Hotel;
+import by.training.finalproject.entity_legacy.Room;
+import by.training.finalproject.entity_legacy.RoomStatus;
 
 import java.math.BigDecimal;
 

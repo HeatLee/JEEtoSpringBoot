@@ -1,8 +1,9 @@
-package by.training.finalproject.entity;
+package by.training.finalproject.entity_legacy;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Deprecated
 public class Room {
     private int id;
     private int capacity;

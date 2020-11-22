@@ -1,6 +1,6 @@
 package by.training.finalproject.dao;
 
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.User;
 import by.training.finalproject.exception.DAOException;
 
 public interface UserDAO<T> extends CommonDAO<T> {

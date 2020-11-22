@@ -3,6 +3,7 @@ package by.training.finalproject.filter;
 import by.training.finalproject.command.CommandParameter;
 import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 
 @WebFilter(filterName = "CommandCheckingFilter", urlPatterns = {"/controller"})
 public class CommandCheckingFilter implements Filter {

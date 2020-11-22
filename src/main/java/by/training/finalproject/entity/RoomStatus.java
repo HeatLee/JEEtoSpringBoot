@@ -4,7 +4,7 @@ public enum RoomStatus {
     AVAILABLE(1),
     RESERVED(2),
     PAID(3),
-    UNSUPPORTED_INDEX(0);;
+    UNSUPPORTED_INDEX(0);
 
     private int statusId;
 

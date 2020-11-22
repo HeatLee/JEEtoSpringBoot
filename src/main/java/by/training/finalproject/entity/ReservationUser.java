@@ -1,36 +1,46 @@
 package by.training.finalproject.entity;
 
+import by.training.finalproject.converter.UserRoleConverter;
+
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
-public class User {
-    private int userId;
+@Entity
+@Table(name = "reservation_user")
+public class ReservationUser {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private int id;
     private String login;
     private String password;
     private String email;
+    @Column(name = "user_role_id")
+    @Convert(converter = UserRoleConverter.class)
     private UserRole userRole;
 
-    public User(int userId, String login, String password, String email, UserRole userRole) {
-        this.userId = userId;
+    @OneToMany(mappedBy = "reservationUser", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Request> requestList;
+
+    protected ReservationUser() {
+    }
+
+    public ReservationUser(String login, String password, String email, UserRole userRole) {
         this.login = login;
         this.password = password;
         this.email = email;
         this.userRole = userRole;
     }
 
-    public User(User user) {
-        this.userId = user.userId;
+    public ReservationUser(ReservationUser user) {
+        this.id = user.id;
         this.login = user.login;
         this.password = user.password;
         this.email = user.email;
         this.userRole = UserRole.getRoleById(user.userRole.getId());
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
+        this.requestList.clear();
+        this.requestList.addAll(user.requestList);
     }
 
     public String getLogin() {
@@ -65,21 +75,35 @@ public class User {
         this.userRole = userRole;
     }
 
+    public List<Request> getRequestList() {
+        return requestList;
+    }
+
+    public void setRequestList(List<Request> requestList) {
+        if (requestList != null) {
+            for (Request request :
+                    requestList) {
+                request.setReservationUser(this);
+            }
+        }
+        this.requestList = requestList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return userId == user.userId &&
+        ReservationUser user = (ReservationUser) o;
+        return id == user.id &&
                 Objects.equals(login, user.login) &&
                 Objects.equals(password, user.password) &&
                 Objects.equals(email, user.email) &&
-                userRole == user.userRole;
+                Objects.equals(userRole, user.userRole);
     }
 
     @Override
     public int hashCode() {
-        int result = userId;
+        int result = id;
         result = 31 * result + (login != null ? login.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
@@ -90,7 +114,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +

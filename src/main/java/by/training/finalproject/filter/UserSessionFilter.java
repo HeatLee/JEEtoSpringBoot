@@ -4,7 +4,7 @@ import by.training.finalproject.command.Attribute;
 import by.training.finalproject.command.CommandParameter;
 import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.EnumSet;
+
 
 @WebFilter(filterName = "UserSessionFilter", urlPatterns = {"/controller"})
 public class UserSessionFilter implements Filter {

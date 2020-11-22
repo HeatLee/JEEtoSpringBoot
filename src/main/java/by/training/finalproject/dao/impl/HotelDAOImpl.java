@@ -6,8 +6,8 @@ import by.training.finalproject.dao.AbstractCommonDAO;
 import by.training.finalproject.dao.HotelDAO;
 import by.training.finalproject.dao.SQLStatement;
 import by.training.finalproject.dao.SQLTableLabel;
-import by.training.finalproject.entity.Address;
-import by.training.finalproject.entity.Hotel;
+import by.training.finalproject.entity_legacy.Address;
+import by.training.finalproject.entity_legacy.Hotel;
 import by.training.finalproject.exception.DAOException;
 import org.apache.log4j.Logger;
 

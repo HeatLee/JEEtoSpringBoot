@@ -1,7 +1,7 @@
 package by.training.finalproject.validator.impl;
 
-import by.training.finalproject.entity.Room;
-import by.training.finalproject.entity.RoomStatus;
+import by.training.finalproject.entity_legacy.Room;
+import by.training.finalproject.entity_legacy.RoomStatus;
 import by.training.finalproject.exception.ValidatorException;
 import by.training.finalproject.validator.Validator;
 

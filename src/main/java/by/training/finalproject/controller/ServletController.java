@@ -6,6 +6,8 @@ import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
 import by.training.finalproject.factory.CommandFactory;
 import by.training.finalproject.pool.ConnectionPool;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

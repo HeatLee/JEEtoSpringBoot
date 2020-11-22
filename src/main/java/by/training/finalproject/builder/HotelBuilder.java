@@ -1,7 +1,7 @@
 package by.training.finalproject.builder;
 
-import by.training.finalproject.entity.Address;
-import by.training.finalproject.entity.Hotel;
+import by.training.finalproject.entity_legacy.Address;
+import by.training.finalproject.entity_legacy.Hotel;
 
 public class HotelBuilder {
 

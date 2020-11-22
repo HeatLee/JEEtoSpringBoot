@@ -5,7 +5,7 @@ import by.training.finalproject.dao.AbstractCommonDAO;
 import by.training.finalproject.dao.ResponseDAO;
 import by.training.finalproject.dao.SQLStatement;
 import by.training.finalproject.dao.SQLTableLabel;
-import by.training.finalproject.entity.*;
+import by.training.finalproject.entity_legacy.*;
 import by.training.finalproject.exception.DAOException;
 import org.apache.log4j.Logger;
 

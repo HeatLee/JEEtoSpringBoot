@@ -1,12 +1,11 @@
 package by.training.finalproject.builder;
 
-import by.training.finalproject.entity.Address;
-import by.training.finalproject.entity.Request;
-import by.training.finalproject.entity.RequestStatus;
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.Address;
+import by.training.finalproject.entity_legacy.Request;
+import by.training.finalproject.entity_legacy.RequestStatus;
+import by.training.finalproject.entity_legacy.User;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class RequestBuilder {
 

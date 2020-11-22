@@ -1,8 +1,11 @@
 package by.training.finalproject.filter;
 
+import org.springframework.stereotype.Component;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+
 
 @WebFilter(filterName = "EncodingFilter" ,urlPatterns = {"/*"})
 public class EncodingFilter implements Filter {

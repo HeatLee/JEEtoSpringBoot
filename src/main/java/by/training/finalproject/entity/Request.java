@@ -1,20 +1,39 @@
 package by.training.finalproject.entity;
 
+import by.training.finalproject.converter.RequestStatusConverter;
+import by.training.finalproject.entity_legacy.User;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
+@Table(name = "request")
 public class Request {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "request_id")
     private int id;
     private int capacity;
     private LocalDate checkIn;
     private LocalDate departure;
     private int stars;
+    @OneToOne
+    @JoinColumn(name = "address_id")
     private Address address;
-    private User reservationUser;
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,
+            CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinColumn(name = "reservation_user_id")
+    private ReservationUser reservationUser;
+    @Column(name = "status_id")
+    @Convert(converter = RequestStatusConverter.class)
     private RequestStatus status;
 
-    public Request(int id, int capacity, LocalDate checkIn, LocalDate departure, int stars, Address address, User reservationUser, RequestStatus status) {
-        this.id = id;
+    protected Request() {
+    }
+
+    public Request(int capacity, LocalDate checkIn, LocalDate departure,
+                   int stars, Address address, ReservationUser reservationUser, RequestStatus status) {
         this.capacity = capacity;
         this.checkIn = checkIn;
         this.departure = departure;
@@ -33,7 +52,7 @@ public class Request {
                 request.departure.getMonth(), request.departure.getDayOfMonth());
         this.stars = request.stars;
         this.address = new Address(request.address);
-        this.reservationUser = new User(request.reservationUser);
+        this.reservationUser = new ReservationUser(request.reservationUser);
         this.status = RequestStatus.getStatusById(request.getStatus().getId());
     }
 
@@ -45,11 +64,11 @@ public class Request {
         this.status = status;
     }
 
-    public User getReservationUser() {
+    public ReservationUser getReservationUser() {
         return reservationUser;
     }
 
-    public void setReservationUser(User reservationUser) {
+    public void setReservationUser(ReservationUser reservationUser) {
         this.reservationUser = reservationUser;
     }
 
@@ -136,7 +155,7 @@ public class Request {
                 ", departure=" + departure +
                 ", stars=" + stars +
                 ", address=" + address +
-                ", reservationUserId=" + reservationUser +
+                ", reservationUser=" + reservationUser +
                 '}';
     }
 }

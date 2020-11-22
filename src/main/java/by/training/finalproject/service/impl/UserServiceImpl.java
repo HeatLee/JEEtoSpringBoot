@@ -1,7 +1,7 @@
 package by.training.finalproject.service.impl;
 
 import by.training.finalproject.dao.UserDAO;
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.User;
 import by.training.finalproject.exception.DAOException;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.exception.ValidatorException;

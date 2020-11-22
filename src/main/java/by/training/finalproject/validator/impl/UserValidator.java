@@ -1,7 +1,7 @@
 package by.training.finalproject.validator.impl;
 
-import by.training.finalproject.entity.User;
-import by.training.finalproject.entity.UserRole;
+import by.training.finalproject.entity_legacy.User;
+import by.training.finalproject.entity_legacy.UserRole;
 import by.training.finalproject.exception.ValidatorException;
 import by.training.finalproject.validator.Validator;
 

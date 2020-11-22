@@ -5,11 +5,10 @@ import by.training.finalproject.command.Attribute;
 import by.training.finalproject.command.Command;
 import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.User;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.factory.ServiceFactory;
 import by.training.finalproject.service.UserService;
-import by.training.finalproject.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;

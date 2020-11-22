@@ -1,6 +1,6 @@
 package by.training.finalproject.dao;
 
-import by.training.finalproject.entity.Request;
+import by.training.finalproject.entity_legacy.Request;
 import by.training.finalproject.exception.DAOException;
 
 import java.util.List;

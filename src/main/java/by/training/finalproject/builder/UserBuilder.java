@@ -1,7 +1,7 @@
 package by.training.finalproject.builder;
 
-import by.training.finalproject.entity.User;
-import by.training.finalproject.entity.UserRole;
+import by.training.finalproject.entity_legacy.User;
+import by.training.finalproject.entity_legacy.UserRole;
 
 public class UserBuilder{
     private int userId;

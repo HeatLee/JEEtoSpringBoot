@@ -1,6 +1,6 @@
 package by.training.finalproject.service;
 
-import by.training.finalproject.entity.User;
+import by.training.finalproject.entity_legacy.User;
 import by.training.finalproject.exception.ServiceException;
 
 public interface UserService {

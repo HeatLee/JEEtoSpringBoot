@@ -4,7 +4,7 @@ import by.training.finalproject.command.Attribute;
 import by.training.finalproject.command.Command;
 import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
-import by.training.finalproject.entity.Response;
+import by.training.finalproject.entity_legacy.Response;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.factory.ServiceFactory;
 import by.training.finalproject.service.ResponseService;

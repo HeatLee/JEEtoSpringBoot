@@ -2,8 +2,8 @@ package by.training.finalproject.service.impl;
 
 import by.training.finalproject.dao.AddressDAO;
 import by.training.finalproject.dao.HotelDAO;
-import by.training.finalproject.entity.Address;
-import by.training.finalproject.entity.Hotel;
+import by.training.finalproject.entity_legacy.Address;
+import by.training.finalproject.entity_legacy.Hotel;
 import by.training.finalproject.exception.DAOException;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.exception.ValidatorException;

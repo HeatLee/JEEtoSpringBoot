@@ -1,15 +1,27 @@
 package by.training.finalproject.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "hotel")
 public class Hotel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "hotel_id")
     private int id;
+    @Column(name = "hotel_name")
     private String name;
+    @Column(name = "stars")
     private int stars;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
     private Address address;
 
-    public Hotel(int id, String name, int stars, Address address) {
-        this.id = id;
+    protected Hotel() {
+    }
+
+    public Hotel(String name, int stars, Address address) {
         this.name = name;
         this.stars = stars;
         this.address = address;

@@ -1,9 +1,9 @@
 package by.training.finalproject.sort;
 
 import by.training.finalproject.dao.ResponseDAO;
-import by.training.finalproject.entity.Request;
-import by.training.finalproject.entity.Response;
-import by.training.finalproject.entity.Room;
+import by.training.finalproject.entity_legacy.Request;
+import by.training.finalproject.entity_legacy.Response;
+import by.training.finalproject.entity_legacy.Room;
 import by.training.finalproject.exception.ChainException;
 import by.training.finalproject.exception.DAOException;
 import by.training.finalproject.factory.DAOFactory;

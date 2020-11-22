@@ -1,8 +1,8 @@
 package by.training.finalproject.service.impl;
 
 import by.training.finalproject.dao.RoomDAO;
-import by.training.finalproject.entity.Request;
-import by.training.finalproject.entity.Room;
+import by.training.finalproject.entity_legacy.Request;
+import by.training.finalproject.entity_legacy.Room;
 import by.training.finalproject.exception.ChainException;
 import by.training.finalproject.exception.DAOException;
 import by.training.finalproject.exception.ServiceException;

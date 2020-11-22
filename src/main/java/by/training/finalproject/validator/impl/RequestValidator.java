@@ -1,13 +1,11 @@
 package by.training.finalproject.validator.impl;
 
 
-import by.training.finalproject.entity.Request;
+import by.training.finalproject.entity_legacy.Request;
 import by.training.finalproject.exception.ValidatorException;
 import by.training.finalproject.validator.Validator;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class RequestValidator implements Validator<Request> {
     @Override

@@ -1,6 +1,6 @@
 package by.training.finalproject.validator.impl;
 
-import by.training.finalproject.entity.Hotel;
+import by.training.finalproject.entity_legacy.Hotel;
 import by.training.finalproject.exception.ValidatorException;
 import by.training.finalproject.validator.Validator;
 

@@ -1,7 +1,7 @@
 package by.training.finalproject.service;
 
-import by.training.finalproject.entity.Request;
-import by.training.finalproject.entity.RequestStatus;
+import by.training.finalproject.entity_legacy.Request;
+import by.training.finalproject.entity_legacy.RequestStatus;
 import by.training.finalproject.exception.ServiceException;
 
 import java.util.List;

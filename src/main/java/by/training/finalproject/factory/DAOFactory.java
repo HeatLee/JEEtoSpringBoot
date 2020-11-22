@@ -2,7 +2,7 @@ package by.training.finalproject.factory;
 
 import by.training.finalproject.dao.*;
 import by.training.finalproject.dao.impl.*;
-import by.training.finalproject.entity.*;
+import by.training.finalproject.entity_legacy.*;
 
 public enum DAOFactory {
     INSTANCE;

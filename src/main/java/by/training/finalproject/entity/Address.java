@@ -1,14 +1,24 @@
 package by.training.finalproject.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "address")
 public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "address_id")
     private int id;
+    @Column(name = "country")
     private String country;
+    @Column(name = "town")
     private String town;
 
-    public Address(int id, String country, String town) {
-        this.id = id;
+    protected Address() {
+    }
+
+    public Address(String country, String town) {
         this.country = country;
         this.town = town;
     }

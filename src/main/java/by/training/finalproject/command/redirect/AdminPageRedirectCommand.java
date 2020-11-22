@@ -3,17 +3,14 @@ package by.training.finalproject.command.redirect;
 import by.training.finalproject.command.Attribute;
 import by.training.finalproject.command.Command;
 import by.training.finalproject.command.Page;
-import by.training.finalproject.entity.Request;
 import by.training.finalproject.exception.ServiceException;
 import by.training.finalproject.factory.ServiceFactory;
 import by.training.finalproject.service.HotelService;
 import by.training.finalproject.service.RequestService;
-import by.training.finalproject.service.RoomService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 public class AdminPageRedirectCommand implements Command {
     private static final Logger LOGGER = Logger.getLogger(AdminPageRedirectCommand.class);

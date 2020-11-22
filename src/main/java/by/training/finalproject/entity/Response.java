@@ -1,22 +1,35 @@
 package by.training.finalproject.entity;
 
+
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "response")
 public class Response {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "response_id")
     private int id;
+    @OneToOne
+    @JoinColumn(name = "request_id", referencedColumnName = "request_id")
     private Request request;
-    private Room room;
+    @OneToOne
+    @JoinColumn(name = "hotel_room_id", referencedColumnName = "hotel_room_id")
+    private HotelRoom room;
 
-    public Response(int id, Request request, Room room) {
-        this.id = id;
+    protected Response() {
+    }
+
+    public Response(Request request, HotelRoom room) {
         this.request = request;
         this.room = room;
     }
 
     public Response(Response response) {
         this.id = response.id;
+        this.room = new HotelRoom(response.room);
         this.request = new Request(response.request);
-        this.room = new Room(response.room);
     }
 
     public int getId() {
@@ -35,11 +48,11 @@ public class Response {
         this.request = request;
     }
 
-    public Room getRoom() {
+    public HotelRoom getRoom() {
         return room;
     }
 
-    public void setRoom(Room room) {
+    public void setRoom(HotelRoom room) {
         this.room = room;
     }
 
@@ -56,7 +69,7 @@ public class Response {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (request != null ? request.hashCode() : 0);
+        result = 31 * result + (request != null ? request.hashCode():0);
         result = 31 * result + (room != null ? room.hashCode() : 0);
         return result;
     }

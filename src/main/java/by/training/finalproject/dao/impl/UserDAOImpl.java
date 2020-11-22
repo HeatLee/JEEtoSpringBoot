@@ -5,8 +5,8 @@ import by.training.finalproject.dao.AbstractCommonDAO;
 import by.training.finalproject.dao.SQLStatement;
 import by.training.finalproject.dao.SQLTableLabel;
 import by.training.finalproject.dao.UserDAO;
-import by.training.finalproject.entity.User;
-import by.training.finalproject.entity.UserRole;
+import by.training.finalproject.entity_legacy.User;
+import by.training.finalproject.entity_legacy.UserRole;
 import by.training.finalproject.exception.DAOException;
 import org.apache.log4j.Logger;
 

@@ -1,7 +1,7 @@
 package by.training.finalproject.dao;
 
-import by.training.finalproject.entity.Room;
-import by.training.finalproject.entity.RoomStatus;
+import by.training.finalproject.entity_legacy.Room;
+import by.training.finalproject.entity_legacy.RoomStatus;
 import by.training.finalproject.exception.DAOException;
 
 import java.util.List;

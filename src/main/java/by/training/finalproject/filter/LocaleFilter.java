@@ -3,6 +3,7 @@ package by.training.finalproject.filter;
 import by.training.finalproject.command.Attribute;
 import by.training.finalproject.command.JSPParameter;
 import by.training.finalproject.command.Page;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Locale;
+
 
 @WebFilter(filterName = "LocaleFilter", urlPatterns = {"/*"})
 public class LocaleFilter implements Filter {
